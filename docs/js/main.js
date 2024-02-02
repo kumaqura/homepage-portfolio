@@ -1,5 +1,5 @@
 const includeHeader = new XMLHttpRequest();
-includeHeader.open("GET", "_includes/header.html", true);
+includeHeader.open("GET", "include/header.html", true);
 includeHeader.onreadystatechange = function () {
   if (includeHeader.readyState === 4 && includeHeader.status === 200) {
     const headerHTML = includeHeader.responseText;
@@ -10,7 +10,7 @@ includeHeader.onreadystatechange = function () {
 includeHeader.send();
 
 const includeFooter = new XMLHttpRequest();
-includeFooter.open("GET", "_includes/footer.html", true);
+includeFooter.open("GET", "include/footer.html", true);
 includeFooter.onreadystatechange = function () {
   if (includeFooter.readyState === 4 && includeFooter.status === 200) {
     const footerHTML = includeFooter.responseText;
